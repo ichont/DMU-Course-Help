@@ -1,0 +1,10 @@
+ORG 	0000H
+	DB	00H
+	DB	70H
+
+
+ORG	0032H
+	DB	30H
+	DB	04H
+	
+END
