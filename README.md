@@ -1,4 +1,4 @@
-# NJUPT-General-Free-Exams
+# DMU-cs-course
 
 [![stargazers](https://img.shields.io/github/stars/Chi-Kai/DMU-cs-course.svg?style=for-the-badge)](https://github.com/Chi-Kai/DMU-cs-course/stargazers)
 [![contributors](https://img.shields.io/github/forks/Chi-Kai/DMU-cs-course.svg?style=for-the-badge)](https://github.com/Chi-Kai/DMU-cs-course/network/members)
@@ -11,7 +11,7 @@
 
 ## 说明
 
-📍 在使用本项目的资料之前，请务必阅读：[`NJUPTFreeExams 使用说明`](https://njuptfreeexams.github.io/UserGuide.html).
+📍 在使用本项目的资料之前，请务必阅读：[`DMU-cs-course 使用说明`](https://njuptfreeexams.github.io/UserGuide.html).
 
 1. **本 repo 下资料仅供个人学习交流使用，请在下载后 24 小时内删除。如有侵权，请及时与我们联系。**
 2. 资料仅供参考，请自己判断适用性。
