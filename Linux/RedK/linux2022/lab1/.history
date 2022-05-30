@@ -1,0 +1,33 @@
+ls
+ls > 2
+ls
+ls > 3 
+ls > 3 &
+ls
+ls
+clear
+ls
+cat .history
+ls
+ls
+ls
+ls
+cat -n 1
+cat 1
+wc 1
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+clear
+clear
+history
+clear
+help
+ls
