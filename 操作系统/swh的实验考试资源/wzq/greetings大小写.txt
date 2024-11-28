@@ -1,0 +1,84 @@
+#include<unistd.h>      // 包含与Unix系统调用相关的头文件
+#include<signal.h>     // 包含信号处理相关的头文件
+#include<stdio.h>      // 标准输入输出库
+#include<sys/wait.h>   // 包含等待进程相关的头文件
+#include<string.h>     // 包含字符串处理相关的头文件
+#include<stdlib.h>     // 包含标准库函数的头文件
+#include <ctype.h>
+#define BUFFER_SIZE 25  // 定义缓冲区大小
+#define READ_END	0    // 管道读取端的索引
+#define WRITE_END	1   // 管道写入端的索引
+
+int main(void)
+{ 
+	char write_msg[BUFFER_SIZE] = "Greetings"; // 初始化写入消息
+	char read_msg[BUFFER_SIZE]; // 用于存储读取消息
+	pid_t pid; // 定义一个整数类型，进程ID
+	int first_pipe[2]; // 第一个管道
+	int second_pipe[2]; // 第二个管道
+	int i; // 用于循环迭代的变量
+
+	// 创建第一个管道
+	if (pipe(first_pipe)) {
+		fprintf(stderr,"First Pipe failed"); // 如果管道创建失败则打印错误信息
+		return 1;
+	}
+	
+	// 创建第二个管道
+	if (pipe(second_pipe)) {
+		fprintf(stderr,"Second Pipe failed"); // 如果管道创建失败则打印错误信息
+		return 1;
+	}
+
+	// 创建子进程
+	pid = fork();
+	if (pid == -1) {
+		fprintf(stderr, "Fork failed"); // 如果进程创建失败则打印错误信息
+		return 1;
+	}
+
+	if (pid > 0) {    /* 父进程 */
+		/* 关闭未使用的管道端 */
+		close(first_pipe[READ_END]);
+		close(second_pipe[WRITE_END]);
+		
+		/* 向第一个管道写入数据 */
+		write(first_pipe[1], write_msg, BUFFER_SIZE); 
+		
+		/* 现在关闭第一个管道的写入端 */
+		close(first_pipe[WRITE_END]);
+		
+		/* 从第二个管道读取结果 */
+		read(second_pipe[0], read_msg, BUFFER_SIZE);
+		
+		printf("parent read >%s<\n", read_msg); // 打印父进程读取的消息
+		close(second_pipe[READ_END]);
+	}
+	else { /* 子进程 */
+		/* 关闭未使用的管道端 */
+		close(first_pipe[WRITE_END]);
+		close(second_pipe[READ_END]);
+		
+		/* 从第一个管道读取数据 */
+		read(first_pipe[0], read_msg, BUFFER_SIZE);
+		printf("child read >%s<\n", read_msg); // 打印子进程读取的消息
+		
+		/* 反转字符串中的大小写字符 */
+		for (i = 0; i < strlen(read_msg); i++) {
+			if (isupper(read_msg[i]))
+				write_msg[i] = tolower(read_msg[i]);
+			else if (islower(read_msg[i]))
+				write_msg[i] = toupper(read_msg[i]);
+			else
+				write_msg[i] = read_msg[i];
+		}
+		
+		/* 向第二个管道写入数据 */
+		write(second_pipe[1], write_msg, BUFFER_SIZE);
+		
+		/* 关闭第一个管道的读取端和第二个管道的写入端 */
+		close(first_pipe[READ_END]);
+		close(second_pipe[WRITE_END]);
+	}
+	return 0;
+}
