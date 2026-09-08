@@ -1,0 +1,58 @@
+// 交换两个整数的值
+void swap(int *x, int *y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+// 在数组a的子数组a[left : right]中选择第k小的元素
+int select(int a[], int left, int right, int k) {
+    // 如果子数组只有一个元素，则直接返回该元素
+    if (left >= right)
+        return a[left];
+
+    // 将左端点作为pivot
+    int pivot = a[left];
+    // 定义左指针和右指针
+    int i = left + 1; // 从左向右扫描的指针
+    int j = right;    // 从右向左扫描的指针
+
+    // 在子数组中进行划分
+    while (i <= j) {
+        // 从左向右找到第一个大于等于pivot的元素
+        while (i <= right && a[i] < pivot)
+            i++;
+        // 从右向左找到第一个小于等于pivot的元素
+        while (j >= left && a[j] > pivot)
+            j--;
+        
+        // 如果i<j，交换两个元素
+        if (i < j)
+            swap(&a[i], &a[j]);
+    }
+    
+    // 将pivot放置到正确的位置上
+    swap(&a[left], &a[j]);
+
+    // 计算pivot的位置
+    int pivot_index = j - left + 1;
+
+    // 如果pivot的位置就是k，则返回pivot
+    if (pivot_index == k)
+        return pivot;
+    // 如果pivot的位置小于k，则在右子数组中继续寻找第k-pivot_index小的元素
+    else if (pivot_index < k)
+        return select(a, j + 1, right, k - pivot_index);
+    // 如果pivot的位置大于k，则在左子数组中继续寻找第k小的元素
+    else
+        return select(a, left, j - 1, k);
+}
+
+// 返回数组a中第k小的元素
+int xzwt(int a[], int n, int k) {
+    // 如果k不在合法范围内，则报错
+    if (k < 1 || k > n)
+        error();
+    // 调用select函数返回第k小的元素
+    return select(a, 0, n - 1, k);
+}
