@@ -1,0 +1,99 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main() {
+	Graphic* line = new Line();
+	Graphic* rectangle = new Rectangle();
+	Graphic* text = new Text();
+	Graphic* picture = new Picture();
+	picture->add(line);
+	picture->add(rectangle);
+	picture->add(text);
+	picture->draw();
+	picture->remove(line);
+	Graphic* child = picture->getChild(0);
+	delete line;
+	delete rectangle;
+	delete text;
+	delete picture;
+	//Graphic* circle = new Circle();
+	//picture -> add(circle);
+	//picture -> draw();
+	//delete circle;
+	//return 0;
+	return 0;
+}
+
+class Graphic {
+public:
+	virtual void draw = 0;
+	virtual void add(Graphic* graphic) = 0;
+	virtual void remove(Graphic* graphic) = 0;
+	virtual Graphic* getChild(int index) = 0;
+};
+
+class Line :public Graphic {
+public:
+	void draw() override {
+		// draw a line
+		void add(Graphic * graphic)override {}
+		void remove(Graphic * graphic)override {}
+		Graphic* getChild(int index)override { return nullptr; }
+
+	};
+class Rectangle:public Graphic{
+public:
+	void draw()override {
+		// draw a rectangle
+		void add(Graphic * graphic)override {}
+		void remove(Graphic * graphic)override {}
+		Graphic* getChild(int index)override { return nullptr; }
+	};
+
+	class Text :public Graphic {
+	public:
+		void draw()override {
+			// draw text
+			void add(Graphic * graphic)override {}
+			void remove(Graphic * graphic)override {}
+			Graphic* getChild(int index)override { return nullptr; }
+		};
+
+		class Picture :public Graphic {
+		public:
+			void draw()override {
+				// draw a picture
+				for (auto graphic : children) {
+					graphic->fraw();
+				}
+			}auto it = find(children.begin(), children.end(), graphic);
+			if (it != children.end()) {
+				children.erase(it);
+			}
+		};
+
+		void add(Graphic* graphic) override {
+			children.push_back(graphic);
+		}
+		Graphic* getChild(int index) override {
+			if (index >= 0 && index < children.size()) {
+				return children[index];
+			}
+			else {
+				return nullptr;
+			}
+		}
+	private:
+		vector<Graphic*>children;
+	};
+
+	//class Circle :public Graphic {
+	//public:
+	//	void draw()override {
+	//		// draw a circle
+	//		void add(Graphic * graphic)override {}
+	//		void remove(Graphic * graphic)override {}
+	//		Graphic* getChild(int index)override { return nullptr; }
+	//};
