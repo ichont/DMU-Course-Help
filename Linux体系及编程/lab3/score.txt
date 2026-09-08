@@ -1,0 +1,5 @@
+2043	haiziliang	100
+1111	tom	99
+1234	zhangsan	61
+4321	xyy	60
+0000	myy	98
