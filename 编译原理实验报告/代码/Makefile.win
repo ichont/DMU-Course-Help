@@ -1,0 +1,37 @@
+# Project: bianyi
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = cifa.o yufa.o yuyi.o xuni.o
+LINKOBJ  = cifa.o yufa.o yuyi.o xuni.o
+LIBS     = -L"D:/Dev-Cpp/MinGW64/lib" -L"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Dev-Cpp/MinGW64/include" -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Dev-Cpp/MinGW64/include" -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = bianyi.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+cifa.o: cifa.cpp
+	$(CPP) -c cifa.cpp -o cifa.o $(CXXFLAGS)
+
+yufa.o: yufa.cpp
+	$(CPP) -c yufa.cpp -o yufa.o $(CXXFLAGS)
+
+yuyi.o: yuyi.cpp
+	$(CPP) -c yuyi.cpp -o yuyi.o $(CXXFLAGS)
+
+xuni.o: xuni.cpp
+	$(CPP) -c xuni.cpp -o xuni.o $(CXXFLAGS)

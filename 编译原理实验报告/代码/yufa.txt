@@ -1,0 +1,216 @@
+<program>
+`      <declaration_list>
+`      <fun_declaration>
+`      `      function
+`      `      f
+`      `      (
+`      `      )
+`      `      <function_body>
+`      `      `      {
+`      `      `      <declaration_list>
+`      `      `      `      <declaration_stat>
+`      `      `      `      `      int
+`      `      `      `      `      a
+`      `      `      `      `      ;
+`      `      `      `      <declaration_stat>
+`      `      `      `      `      int
+`      `      `      `      `      b
+`      `      `      `      `      ;
+`      `      `      `      <declaration_stat>
+`      `      `      `      `      int
+`      `      `      `      `      i
+`      `      `      `      `      ;
+`      `      `      <statement_list>
+`      `      `      `      <statement>
+`      `      `      `      `      <read_stat>
+`      `      `      `      `      `      read
+`      `      `      `      `      `      a
+`      `      `      `      `      `      ;
+`      `      `      `      `      <expression_stat>
+`      `      `      `      `      `      <expression>
+`      `      `      `      `      `      `      b
+`      `      `      `      `      `      `      =
+`      `      `      `      `      `      `      <bool_expr>
+`      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      5
+`      `      `      `      `      `      ;
+`      `      `      `      <statement>
+`      `      `      `      `      <while_stat>
+`      `      `      `      `      `      while
+`      `      `      `      `      `      (
+`      `      `      `      `      `      <expression>
+`      `      `      `      `      `      `      <bool_expr>
+`      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      a
+`      `      `      `      `      `      `      `      >=
+`      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      3
+`      `      `      `      `      `      )
+`      `      `      `      `      `      <statement>
+`      `      `      `      `      `      `      <compound_stat>
+`      `      `      `      `      `      `      `      {
+`      `      `      `      `      `      `      `      <statement_list>
+`      `      `      `      `      `      `      `      `      <statement>
+`      `      `      `      `      `      `      `      `      `      <expression_stat>
+`      `      `      `      `      `      `      `      `      `      `      <expression>
+`      `      `      `      `      `      `      `      `      `      `      `      b
+`      `      `      `      `      `      `      `      `      `      `      `      =
+`      `      `      `      `      `      `      `      `      `      `      `      <bool_expr>
+`      `      `      `      `      `      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      `      b
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      *
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      `      5
+`      `      `      `      `      `      `      `      `      `      `      ;
+`      `      `      `      `      `      `      `      `      <statement>
+`      `      `      `      `      `      `      `      `      `      <expression_stat>
+`      `      `      `      `      `      `      `      `      `      `      <expression>
+`      `      `      `      `      `      `      `      `      `      `      `      a
+`      `      `      `      `      `      `      `      `      `      `      `      =
+`      `      `      `      `      `      `      `      `      `      `      `      <bool_expr>
+`      `      `      `      `      `      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      `      a
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      -
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      `      1
+`      `      `      `      `      `      `      `      `      `      `      ;
+`      `      `      `      `      `      `      `      `      <statement>
+`      `      `      `      `      `      `      `      `      `      <write_stat>
+`      `      `      `      `      `      `      `      `      `      `      write
+`      `      `      `      `      `      `      `      `      `      `      <expression>
+`      `      `      `      `      `      `      `      `      `      `      `      <bool_expr>
+`      `      `      `      `      `      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      `      b
+`      `      `      `      `      `      `      `      `      `      `      ;
+`      `      `      `      `      `      `      `      `      }
+`      `      `      `      `      <for_stat>
+`      `      `      `      `      `      for
+`      `      `      `      `      `      (
+`      `      `      `      `      `      <expression>
+`      `      `      `      `      `      `      i
+`      `      `      `      `      `      `      =
+`      `      `      `      `      `      `      <bool_expr>
+`      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      1
+`      `      `      `      `      `      ;
+`      `      `      `      `      `      <expression>
+`      `      `      `      `      `      `      <bool_expr>
+`      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      i
+`      `      `      `      `      `      `      `      <=
+`      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      3
+`      `      `      `      `      `      ;
+`      `      `      `      `      `      <expression>
+`      `      `      `      `      `      `      i
+`      `      `      `      `      `      `      =
+`      `      `      `      `      `      `      <bool_expr>
+`      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      i
+`      `      `      `      `      `      `      `      `      +
+`      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      1
+`      `      `      `      `      `      )
+`      `      `      `      `      `      <statement>
+`      `      `      `      `      `      `      <compound_stat>
+`      `      `      `      `      `      `      `      {
+`      `      `      `      `      `      `      `      <statement_list>
+`      `      `      `      `      `      `      `      `      <statement>
+`      `      `      `      `      `      `      `      `      `      <expression_stat>
+`      `      `      `      `      `      `      `      `      `      `      <expression>
+`      `      `      `      `      `      `      `      `      `      `      `      a
+`      `      `      `      `      `      `      `      `      `      `      `      =
+`      `      `      `      `      `      `      `      `      `      `      `      <bool_expr>
+`      `      `      `      `      `      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      `      a
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      /
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      `      2
+`      `      `      `      `      `      `      `      `      `      `      ;
+`      `      `      `      `      `      `      `      `      }
+`      `      `      `      <statement>
+`      `      `      `      `      <if_stat>
+`      `      `      `      `      `      if
+`      `      `      `      `      `      (
+`      `      `      `      `      `      <expression>
+`      `      `      `      `      `      `      <bool_expr>
+`      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      a
+`      `      `      `      `      `      `      `      >
+`      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      b
+`      `      `      `      `      `      )
+`      `      `      `      `      `      <statement>
+`      `      `      `      `      `      `      <compound_stat>
+`      `      `      `      `      `      `      `      {
+`      `      `      `      `      `      `      `      <statement_list>
+`      `      `      `      `      `      `      `      `      <statement>
+`      `      `      `      `      `      `      `      `      `      <write_stat>
+`      `      `      `      `      `      `      `      `      `      `      write
+`      `      `      `      `      `      `      `      `      `      `      <expression>
+`      `      `      `      `      `      `      `      `      `      `      `      <bool_expr>
+`      `      `      `      `      `      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      `      `      `      `      `      b
+`      `      `      `      `      `      `      `      `      `      `      ;
+`      `      `      `      `      `      `      `      `      }
+`      `      `      `      `      <write_stat>
+`      `      `      `      `      `      write
+`      `      `      `      `      `      <expression>
+`      `      `      `      `      `      `      <bool_expr>
+`      `      `      `      `      `      `      `      <additive_expr>
+`      `      `      `      `      `      `      `      `      <term>
+`      `      `      `      `      `      `      `      `      `      <factor>
+`      `      `      `      `      `      `      `      `      `      `      a
+`      `      `      `      `      `      ;
+`      `      `      `      }
+`      <main_declaration>
+`      `      int
+`      `      main
+`      `      (
+`      `      )
+`      `      <function_body>
+`      `      `      {
+`      `      `      <declaration_list>
+`      `      `      `      <declaration_stat>
+`      `      `      `      `      int
+`      `      `      `      `      c
+`      `      `      `      `      ;
+`      `      `      <statement_list>
+`      `      `      `      <statement>
+`      `      `      `      `      <call _stat>
+`      `      `      `      `      `      call
+`      `      `      `      `      `      f
+`      `      `      `      `      `      (
+`      `      `      `      `      `      )
+`      `      `      `      `      `      ;
+`      `      `      `      }
